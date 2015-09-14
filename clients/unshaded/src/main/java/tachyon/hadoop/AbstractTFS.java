@@ -352,6 +352,7 @@ abstract class AbstractTFS extends FileSystem {
 
     LOG.info("getFileStatus(" + path + "): HDFS Path: " + hdfsPath + " TPath: " + mTachyonHeader
         + tPath);
+    LOG.info("SOME EXPERIMENT PRINTS");
     if (mStatistics != null) {
       mStatistics.incrementReadOps(1);
     }
@@ -450,6 +451,7 @@ abstract class AbstractTFS extends FileSystem {
     TachyonURI tPath = new TachyonURI(Utils.getPathWithoutScheme(path));
     Path hdfsPath = Utils.getHDFSPath(tPath, mUnderFSAddress);
     LOG.info("listStatus(" + path + "): HDFS Path: " + hdfsPath);
+    LOG.info("SOME EXPERIMENT PRINTS");
 
     if (mStatistics != null) {
       mStatistics.incrementReadOps(1);
